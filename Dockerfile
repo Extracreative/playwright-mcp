@@ -31,7 +31,9 @@ RUN --mount=type=cache,target=/root/.npm,sharing=locked,id=npm-cache \
   npm ci
 
 # Copy the rest of the app
-COPY *.json *.js *.ts .
+COPY *.json .
+COPY *.js .
+COPY *.ts .
 COPY src src/
 
 # Build the app
